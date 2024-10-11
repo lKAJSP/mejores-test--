@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Estilos de Aprendizaje</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4682b4;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h2 {
+            text-align: center;
+            color: #4682b4;
+        }
+        .question {
+            margin: 20px 0;
+        }
+        label {
+            font-size: 1.1em;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #4682b4;
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .result {
+            font-size: 1.5em;
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #d3f8d3;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Test de Estilos de Aprendizaje</h1>
+    </header>
+    <div class="container">
+        <h2>Descubre tu estilo de aprendizaje</h2>
+        <form id="learningStyleForm">
+            <div class="question">
+                <label>1. Cuando estoy aprendiendo algo nuevo, me resulta más útil:</label><br>
+                <input type="radio" name="q1" value="visual"> Ver imágenes, gráficos o diagramas<br>
+                <input type="radio" name="q1" value="auditivo"> Escuchar una explicación detallada<br>
+                <input type="radio" name="q1" value="lectura"> Leer un libro, manual o guía<br>
+                <input type="radio" name="q1" value="kinestesico"> Hacer una actividad práctica relacionada<br>
+            </div>
+
+            <div class="question">
+                <label>2. Cuando estoy recordando información, tiendo a:</label><br>
+                <input type="radio" name="q2" value="visual"> Recordar imágenes o escenas<br>
+                <input type="radio" name="q2" value="auditivo"> Recordar lo que escuché o me dijeron<br>
+                <input type="radio" name="q2" value="lectura"> Recordar lo que leí o escribí<br>
+                <input type="radio" name="q2" value="kinestesico"> Recordar lo que hice o practiqué<br>
+            </div>
+
+            <div class="question">
+                <label>3. Si recibo instrucciones para armar algo, prefiero:</label><br>
+                <input type="radio" name="q3" value="visual"> Ver un video tutorial o esquema<br>
+                <input type="radio" name="q3" value="auditivo"> Escuchar una explicación paso a paso<br>
+                <input type="radio" name="q3" value="lectura"> Leer un manual con detalles<br>
+                <input type="radio" name="q3" value="kinestesico"> Probar por mi cuenta manipulando las piezas<br>
+            </div>
+
+            <div class="question">
+                <label>4. Durante una presentación, me resulta más fácil seguir la información cuando:</label><br>
+                <input type="radio" name="q4" value="visual"> Hay imágenes, gráficos o videos que la acompañan<br>
+                <input type="radio" name="q4" value="auditivo"> Escucho claramente las explicaciones<br>
+                <input type="radio" name="q4" value="lectura"> Me dan materiales escritos para leer<br>
+                <input type="radio" name="q4" value="kinestesico"> Puedo interactuar con la presentación o hacer anotaciones<br>
+            </div>
+
+            <div class="question">
+                <label>5. Cuando estudio por mi cuenta, prefiero:</label><br>
+                <input type="radio" name="q5" value="visual"> Utilizar diagramas, gráficos o resúmenes visuales<br>
+                <input type="radio" name="q5" value="auditivo"> Escuchar grabaciones de las lecciones o explicaciones<br>
+                <input type="radio" name="q5" value="lectura"> Leer libros, apuntes o artículos<br>
+                <input type="radio" name="q5" value="kinestesico"> Hacer ejercicios prácticos o experimentos<br>
+            </div>
+
+            <div class="question">
+                <label>6. En una clase práctica, aprendo mejor cuando:</label><br>
+                <input type="radio" name="q6" value="visual"> Me muestran cómo hacer algo con imágenes o videos<br>
+                <input type="radio" name="q6" value="auditivo"> Escucho al profesor explicando el procedimiento<br>
+                <input type="radio" name="q6" value="lectura"> Leo las instrucciones o una guía detallada<br>
+                <input type="radio" name="q6" value="kinestesico"> Participo directamente en la actividad<br>
+            </div>
+
+            <div class="question">
+                <label>7. Al resolver un problema complejo, prefiero:</label><br>
+                <input type="radio" name="q7" value="visual"> Ver diagramas o ejemplos visuales del problema<br>
+                <input type="radio" name="q7" value="auditivo"> Hablar sobre el problema con alguien más<br>
+                <input type="radio" name="q7" value="lectura"> Leer y analizar la información disponible<br>
+                <input type="radio" name="q7" value="kinestesico"> Resolverlo haciendo experimentos o pruebas<br>
+            </div>
+
+            <div class="question">
+                <label>8. Al trabajar en equipo, me resulta más cómodo:</label><br>
+                <input type="radio" name="q8" value="visual"> Crear mapas mentales o diagramas juntos<br>
+                <input type="radio" name="q8" value="auditivo"> Participar en discusiones o debates<br>
+                <input type="radio" name="q8" value="lectura"> Tomar notas y leer sobre las ideas del equipo<br>
+                <input type="radio" name="q8" value="kinestesico"> Realizar las tareas o proyectos juntos de forma activa<br>
+            </div>
+
+            <div class="question">
+                <label>9. En mi tiempo libre, disfruto más:</label><br>
+                <input type="radio" name="q9" value="visual"> Ver series, películas o fotografías<br>
+                <input type="radio" name="q9" value="auditivo"> Escuchar música, podcasts o audiolibros<br>
+                <input type="radio" name="q9" value="lectura"> Leer libros, revistas o artículos en línea<br>
+                <input type="radio" name="q9" value="kinestesico"> Realizar actividades físicas o manualidades<br>
+            </div>
+
+            <div class="question">
+                <label>10. Si necesito aprender un concepto complicado, me ayudará más:</label><br>
+                <input type="radio" name="q10" value="visual"> Ver una infografía o un video explicativo<br>
+                <input type="radio" name="q10" value="auditivo"> Escuchar una clase o charla sobre el tema<br>
+                <input type="radio" name="q10" value="lectura"> Leer artículos, libros o apuntes<br>
+                <input type="radio" name="q10" value="kinestesico"> Hacer ejercicios prácticos o simulaciones<br>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="calculateResult()">Ver Resultados</button>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+   <script>
+    function calculateResult() {
+        const form = document.getElementById('learningStyleForm');
+        const formData = new FormData(form);
+
+        let counts = {
+            visual: 0,
+            auditivo: 0,
+            lectura: 0,
+            kinestesico: 0
+        };
+
+        for (let entry of formData.entries()) {
+            counts[entry[1]]++;
+        }
+
+        let maxStyle = Object.keys(counts).reduce((a, b) => counts[a] > counts[b] ? a : b);
+        let resultText = '';
+
+        switch (maxStyle) {
+            case 'visual':
+                resultText = `
+                    Tu estilo de aprendizaje es <strong>Visual</strong>. 
+                    <br><br> Prefieres aprender a través de imágenes, gráficos, diagramas, y colores. Te ayuda ver mapas conceptuales, presentaciones visuales y videos para asimilar mejor la información ;). 
+                    <br><br> Estrategias recomendadas:
+                    <ul>
+                        <li>Usa gráficos, diagramas y mapas mentales.</li>
+                        <li>Mira videos educativos o usa presentaciones visuales.</li>
+                        <li>Organiza la información usando colores o destacadores.</li>
+                    </ul>
+                `;
+                break;
+            case 'auditivo':
+                resultText = `
+                    Tu estilo de aprendizaje es <strong>Auditivo</strong>.
+                    <br><br> Aprendes mejor escuchando. Las explicaciones orales, las discusiones en clase, y el uso de grabaciones son útiles para ti. Puedes recordar la información mejor cuando la escuchas o hablas sobre ella ;).
+                    <br><br> Estrategias recomendadas:
+                    <ul>
+                        <li>Escucha podcasts, conferencias o explicaciones grabadas.</li>
+                        <li>Participa en discusiones y diálogos sobre los temas de estudio.</li>
+                        <li>Graba tus propias notas y escúchalas más tarde.</li>
+                    </ul>
+                `;
+                break;
+            case 'lectura':
+                resultText = `
+                    Tu estilo de aprendizaje es <strong>Lectura y Escritura</strong>.
+                    <br><br> Te gusta leer y escribir. Prefieres aprender a través de textos escritos, como libros, artículos o apuntes. Tomar notas detalladas y leer materiales de estudio es la mejor manera de procesar y recordar la información para ti ;).
+                    <br><br> Estrategias recomendadas:
+                    <ul>
+                        <li>Lee libros, artículos o sitios web sobre el tema.</li>
+                        <li>Toma apuntes detallados durante clases o lecturas.</li>
+                        <li>Organiza tu estudio creando listas y resúmenes escritos.</li>
+                    </ul>
+                `;
+                break;
+            case 'kinestesico':
+                resultText = `
+                    Tu estilo de aprendizaje es <strong>Kinestésico</strong>.
+                    <br><br> Aprendes mejor haciendo y experimentando. Prefieres el aprendizaje práctico y físico, donde puedes tocar, construir o moverte para entender mejor un concepto ;).
+                    <br><br> Estrategias recomendadas:
+                    <ul>
+                        <li>Realiza experimentos o proyectos prácticos.</li>
+                        <li>Usa modelos físicos, actividades interactivas o simulaciones.</li>
+                        <li>Divide el estudio en sesiones más cortas y activa tu cuerpo mientras estudias, como caminando o usando técnicas de dramatización.</li>
+                    </ul>
+                `;
+                break;
+        }
+
+        document.getElementById('result').innerHTML = resultText;
+        document.getElementById('result').style.display = 'block';
+    }
+</script>
+</body>
+</html>
